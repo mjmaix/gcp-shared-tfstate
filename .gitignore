@@ -1,0 +1,7 @@
+auth/*.json
+terraform-local.tfvars
+plan.local.out
+
+### Terraform ###
+# Local .terraform directories
+**/.terraform/*

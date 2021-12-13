@@ -1,0 +1,9 @@
+# GCP Settings
+gcp_project   = "sharedtfstate1"
+gcp_region    = "ap-southeast2"
+gcp_auth_file = "../auth/sharedtfstate1-03f48ec1e1c0.json"
+
+# TF State Bucket
+bucket_name   = "root1-shared-tfstate"
+storage_class = "REGIONAL"
+
