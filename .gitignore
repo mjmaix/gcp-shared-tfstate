@@ -5,3 +5,5 @@ plan.local.out
 ### Terraform ###
 # Local .terraform directories
 **/.terraform/*
+
+.vscode/*

@@ -19,25 +19,36 @@ storage bucket: mclinica-dev-shared-tfstate / mclinca-swiperx-pt-shared-tfstate
 env name prefix: dev# / local-(user) / stg / prod
 app name: newapp1 / pt-api
 
+## Initialize project
+
+Based on [example Makefile](../examples/Makefile)
+
 ```sh
 # dev3
-terraform init \
-    -backend-config="bucket=mclinica-dev-shared-tfstate" \
-    -backend-config="prefix=dev3/newapp1"
+ENV=dev3 \
+    TFSTATE_BUCKET=mclinica-dev-shared-tfstate \
+    GOOGLE_APPLICATION_CREDENTIALS=../auth/sharedtfstate1-03f48ec1e1c0.json \
+    make init
 
-# local-useridentity
-terraform init \
-    -backend-config="bucket=mclinica-dev-shared-tfstate" \
-    -backend-config="prefix=local-mja/newapp1"
+# local-(useridentity)
+ENV=local-mja \
+    TFSTATE_BUCKET=mclinica-dev-shared-tfstate \
+    GOOGLE_APPLICATION_CREDENTIALS=../auth/sharedtfstate1-03f48ec1e1c0.json \
+    make init
 
 ```
 
 # staging
 
 ```sh
-terraform init \
--backend-config="bucket=mclinca-swiperx-pt-shared-tfstate" \
--backend-config="prefix=stg/newapp1"
+ENV=stg \
+    TFSTATE_BUCKET=mclinca-swiperx-pt-shared-tfstate \
+    GOOGLE_APPLICATION_CREDENTIALS=../auth/sharedtfstate1-03f48ec1e1c0.json \
+    make init
 ```
+
+## Plan, apply, and destroy project
+
+Same as init just use Makefiles 'plan'/'apply'/'destroy'
 
 More on this topic: https://www.terraform.io/docs/cli/commands/init.html

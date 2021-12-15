@@ -5,12 +5,12 @@
    - Where ENV=local is the name of environment you're working on
 
 1. cp `ENV=local cp ./tfvars/terraform.tfvars.template ./tfvars/terraform-$(ENV).tfvars`
-   - _SPECIFIC FOR THIS PROJECT ONLY CAUSE THIS IS A STARTING RESOURCE._ we encourage to commit this files for future references of other developers.
+   - We encourage to commit this files for future references of other developers. (_SPECIFIC FOR THIS PROJECT ONLY CAUSE THIS IS A STARTING RESOURCE._)
 1. Update values for new tfvar
 1. Go to project dir `cd src`
 1. Initialise project `ENV=local make init`
 1. Plan the next phase `ENV=local make plan`
-1. Review the changes
+1. Review the diff / planned changes
 1. Apply the changes `ENV=local make apply`
 
 References:

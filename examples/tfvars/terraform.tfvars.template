@@ -1,0 +1,10 @@
+# GCP Settings
+gcp_project   = "sharedtfstate1"
+gcp_region    = "ap-southeast2"
+gcp_auth_file = "../../auth/sharedtfstate1-03f48ec1e1c0.json"
+
+# service account
+account_id  = "tf-demo-service-account"
+name        = "Service Account"
+
+
